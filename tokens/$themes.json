@@ -1,0 +1,86 @@
+[
+  {
+    "id": "base",
+    "name": "Default",
+    "group": "Base",
+    "selectedTokenSets": {
+      "core": "enabled"
+    }
+  },
+  {
+    "id": "brand-torq",
+    "name": "TORQ",
+    "group": "Brand",
+    "selectedTokenSets": {
+      "core": "source",
+      "brand/torq": "enabled",
+      "map": "enabled"
+    }
+  },
+  {
+    "id": "brand-volt",
+    "name": "VOLT",
+    "group": "Brand",
+    "selectedTokenSets": {
+      "core": "source",
+      "brand/volt": "enabled",
+      "map": "enabled"
+    }
+  },
+  {
+    "id": "brand-forma",
+    "name": "FORMA",
+    "group": "Brand",
+    "selectedTokenSets": {
+      "core": "source",
+      "brand/forma": "enabled",
+      "map": "enabled"
+    }
+  },
+  {
+    "id": "theme-light",
+    "name": "Light",
+    "group": "Theme",
+    "selectedTokenSets": {
+      "core": "source",
+      "brand/torq": "source",
+      "map": "source",
+      "theme/light": "enabled"
+    }
+  },
+  {
+    "id": "theme-dark",
+    "name": "Dark",
+    "group": "Theme",
+    "selectedTokenSets": {
+      "core": "source",
+      "brand/torq": "source",
+      "map": "source",
+      "theme/dark": "enabled"
+    }
+  },
+  {
+    "id": "typography",
+    "name": "Default",
+    "group": "Typography",
+    "selectedTokenSets": {
+      "core": "source",
+      "brand/torq": "source",
+      "map": "source",
+      "theme/light": "source",
+      "typography": "enabled"
+    }
+  },
+  {
+    "id": "components",
+    "name": "Default",
+    "group": "Components",
+    "selectedTokenSets": {
+      "core": "source",
+      "brand/torq": "source",
+      "map": "source",
+      "theme/light": "source",
+      "components": "enabled"
+    }
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "color": {
+    "bg": {
+      "primary": {
+        "value": "{color.night}",
+        "type": "color"
+      },
+      "surface": {
+        "value": "{color.nightSurface}",
+        "type": "color"
+      },
+      "inverse": {
+        "value": "{color.paper}",
+        "type": "color"
+      }
+    },
+    "text": {
+      "primary": {
+        "value": "{color.white}",
+        "type": "color"
+      },
+      "secondary": {
+        "value": "{color.darkMuted}",
+        "type": "color"
+      },
+      "accent": {
+        "value": "{color.accentTextDark}",
+        "type": "color"
+      }
+    },
+    "fill": {
+      "primary": {
+        "value": "{color.accentDark}",
+        "type": "color"
+      },
+      "onPrimary": {
+        "value": "{color.onAccentDark}",
+        "type": "color"
+      }
+    },
+    "border": {
+      "value": "{color.lineDark}",
+      "type": "color"
+    },
+    "status": {
+      "success": {
+        "value": "{color.successDark}",
+        "type": "color"
+      },
+      "danger": {
+        "value": "{color.dangerDark}",
+        "type": "color"
+      }
+    }
+  }
+}

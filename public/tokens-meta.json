@@ -1,0 +1,23 @@
+{
+  "counts": {
+    "core": 72,
+    "brand/volt": 31,
+    "brand/torq": 31,
+    "brand/forma": 31,
+    "map": 4,
+    "theme/light": 11,
+    "theme/dark": 11,
+    "typography": 9,
+    "components": 116
+  },
+  "total": 316,
+  "brands": [
+    "volt",
+    "torq",
+    "forma"
+  ],
+  "modes": [
+    "light",
+    "dark"
+  ]
+}

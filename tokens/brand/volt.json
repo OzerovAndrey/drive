@@ -1,0 +1,138 @@
+{
+  "color": {
+    "accent": {
+      "value": "#2458DD",
+      "type": "color"
+    },
+    "accentDark": {
+      "value": "#2458DD",
+      "type": "color"
+    },
+    "onAccent": {
+      "value": "#FFFFFF",
+      "type": "color"
+    },
+    "onAccentDark": {
+      "value": "#FFFFFF",
+      "type": "color"
+    },
+    "accentTextLight": {
+      "value": "#2458DD",
+      "type": "color"
+    },
+    "accentTextDark": {
+      "value": "#9BBCFF",
+      "type": "color"
+    },
+    "paper": {
+      "value": "#F1F5FC",
+      "type": "color"
+    },
+    "surface": {
+      "value": "#FFFFFF",
+      "type": "color"
+    },
+    "ink": {
+      "value": "#10223C",
+      "type": "color"
+    },
+    "night": {
+      "value": "#071322",
+      "type": "color"
+    },
+    "nightSurface": {
+      "value": "#11233A",
+      "type": "color"
+    },
+    "darkMuted": {
+      "value": "#B4C1D6",
+      "type": "color"
+    },
+    "textMuted": {
+      "value": "#51647B",
+      "type": "color"
+    },
+    "lineLight": {
+      "value": "#D5DEEC",
+      "type": "color"
+    },
+    "lineDark": {
+      "value": "#2A405D",
+      "type": "color"
+    }
+  },
+  "fontFamily": {
+    "display": {
+      "value": "DM Sans",
+      "type": "fontFamilies"
+    },
+    "base": {
+      "value": "DM Sans",
+      "type": "fontFamilies"
+    }
+  },
+  "space": {
+    "xs": {
+      "value": "{dimension.4}",
+      "type": "spacing"
+    },
+    "sm": {
+      "value": "{dimension.8}",
+      "type": "spacing"
+    },
+    "md": {
+      "value": "{dimension.16}",
+      "type": "spacing"
+    },
+    "lg": {
+      "value": "{dimension.24}",
+      "type": "spacing"
+    },
+    "xl": {
+      "value": "{dimension.32}",
+      "type": "spacing"
+    },
+    "section": {
+      "value": "{dimension.96}",
+      "type": "spacing"
+    },
+    "page": {
+      "value": "{dimension.64}",
+      "type": "spacing"
+    }
+  },
+  "borderRadius": {
+    "control": {
+      "value": "{radius.16}",
+      "type": "borderRadius"
+    },
+    "surface": {
+      "value": "{radius.16}",
+      "type": "borderRadius"
+    },
+    "pill": {
+      "value": "{radius.999}",
+      "type": "borderRadius"
+    }
+  },
+  "size": {
+    "control": {
+      "value": "{dimension.48}",
+      "type": "sizing"
+    },
+    "icon": {
+      "value": "{dimension.20}",
+      "type": "sizing"
+    },
+    "page": {
+      "value": "{dimension.1440}",
+      "type": "sizing"
+    }
+  },
+  "motion": {
+    "duration": {
+      "value": "{duration.normal}",
+      "type": "number"
+    }
+  }
+}

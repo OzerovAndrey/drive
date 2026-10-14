@@ -1,0 +1,85 @@
+{
+  "typography": {
+    "display": {
+      "value": {
+        "fontFamily": "{fontFamily.display}",
+        "fontSize": "{fontSize.112}",
+        "fontWeight": "{fontWeight.bold}",
+        "lineHeight": "110%"
+      },
+      "type": "typography"
+    },
+    "hero": {
+      "value": {
+        "fontFamily": "{fontFamily.display}",
+        "fontSize": "{fontSize.80}",
+        "fontWeight": "{fontWeight.bold}",
+        "lineHeight": "110%"
+      },
+      "type": "typography"
+    },
+    "h1": {
+      "value": {
+        "fontFamily": "{fontFamily.display}",
+        "fontSize": "{fontSize.64}",
+        "fontWeight": "{fontWeight.bold}",
+        "lineHeight": "110%"
+      },
+      "type": "typography"
+    },
+    "h2": {
+      "value": {
+        "fontFamily": "{fontFamily.display}",
+        "fontSize": "{fontSize.48}",
+        "fontWeight": "{fontWeight.bold}",
+        "lineHeight": "110%"
+      },
+      "type": "typography"
+    },
+    "h3": {
+      "value": {
+        "fontFamily": "{fontFamily.display}",
+        "fontSize": "{fontSize.32}",
+        "fontWeight": "{fontWeight.bold}",
+        "lineHeight": "110%"
+      },
+      "type": "typography"
+    },
+    "title": {
+      "value": {
+        "fontFamily": "{fontFamily.base}",
+        "fontSize": "{fontSize.24}",
+        "fontWeight": "{fontWeight.bold}",
+        "lineHeight": "160%"
+      },
+      "type": "typography"
+    },
+    "body": {
+      "value": {
+        "fontFamily": "{fontFamily.base}",
+        "fontSize": "{fontSize.16}",
+        "fontWeight": "{fontWeight.regular}",
+        "lineHeight": "160%"
+      },
+      "type": "typography"
+    },
+    "small": {
+      "value": {
+        "fontFamily": "{fontFamily.base}",
+        "fontSize": "{fontSize.14}",
+        "fontWeight": "{fontWeight.regular}",
+        "lineHeight": "160%"
+      },
+      "type": "typography"
+    },
+    "caption": {
+      "value": {
+        "fontFamily": "{fontFamily.base}",
+        "fontSize": "{fontSize.12}",
+        "fontWeight": "{fontWeight.regular}",
+        "lineHeight": "160%"
+      },
+      "type": "typography"
+    }
+  }
+}

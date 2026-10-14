@@ -1,0 +1,138 @@
+{
+  "color": {
+    "accent": {
+      "value": "#61472F",
+      "type": "color"
+    },
+    "accentDark": {
+      "value": "#EBCB94",
+      "type": "color"
+    },
+    "onAccent": {
+      "value": "#FFFFFF",
+      "type": "color"
+    },
+    "onAccentDark": {
+      "value": "#211C17",
+      "type": "color"
+    },
+    "accentTextLight": {
+      "value": "#61472F",
+      "type": "color"
+    },
+    "accentTextDark": {
+      "value": "#EBCB94",
+      "type": "color"
+    },
+    "paper": {
+      "value": "#F6F1E8",
+      "type": "color"
+    },
+    "surface": {
+      "value": "#FFFDF8",
+      "type": "color"
+    },
+    "ink": {
+      "value": "#28211B",
+      "type": "color"
+    },
+    "night": {
+      "value": "#1B1916",
+      "type": "color"
+    },
+    "nightSurface": {
+      "value": "#2B2722",
+      "type": "color"
+    },
+    "darkMuted": {
+      "value": "#C4B9AA",
+      "type": "color"
+    },
+    "textMuted": {
+      "value": "#695D51",
+      "type": "color"
+    },
+    "lineLight": {
+      "value": "#DED5C8",
+      "type": "color"
+    },
+    "lineDark": {
+      "value": "#494035",
+      "type": "color"
+    }
+  },
+  "fontFamily": {
+    "display": {
+      "value": "Cormorant Garamond",
+      "type": "fontFamilies"
+    },
+    "base": {
+      "value": "Inter",
+      "type": "fontFamilies"
+    }
+  },
+  "space": {
+    "xs": {
+      "value": "{dimension.4}",
+      "type": "spacing"
+    },
+    "sm": {
+      "value": "{dimension.8}",
+      "type": "spacing"
+    },
+    "md": {
+      "value": "{dimension.16}",
+      "type": "spacing"
+    },
+    "lg": {
+      "value": "{dimension.24}",
+      "type": "spacing"
+    },
+    "xl": {
+      "value": "{dimension.32}",
+      "type": "spacing"
+    },
+    "section": {
+      "value": "{dimension.96}",
+      "type": "spacing"
+    },
+    "page": {
+      "value": "{dimension.64}",
+      "type": "spacing"
+    }
+  },
+  "borderRadius": {
+    "control": {
+      "value": "{radius.8}",
+      "type": "borderRadius"
+    },
+    "surface": {
+      "value": "{radius.8}",
+      "type": "borderRadius"
+    },
+    "pill": {
+      "value": "{radius.999}",
+      "type": "borderRadius"
+    }
+  },
+  "size": {
+    "control": {
+      "value": "{dimension.48}",
+      "type": "sizing"
+    },
+    "icon": {
+      "value": "{dimension.20}",
+      "type": "sizing"
+    },
+    "page": {
+      "value": "{dimension.1440}",
+      "type": "sizing"
+    }
+  },
+  "motion": {
+    "duration": {
+      "value": "{duration.slow}",
+      "type": "number"
+    }
+  }
+}
