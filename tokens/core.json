@@ -269,6 +269,10 @@
     "bold": {
       "value": "700",
       "type": "fontWeights"
+    },
+    "black": {
+      "value": "900",
+      "type": "fontWeights"
     }
   },
   "color": {

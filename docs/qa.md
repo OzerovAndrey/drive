@@ -45,3 +45,5 @@ Electric teaser card: surface width now matches adjacent content cards, with int
 Site-wide container audit: home, catalog, saved, compare, model detail, configurator, how-it-works, system, electric and guide routes inspected in source. Section backgrounds/borders, CTA surfaces and guide covers now use shared content width; removed double-gutter surface expansion. Grid children allow shrinking and comparison overflow remains local. Existing domain tests, token checks, production build and 138 SSR route/appearance renders passed. Actual browser/viewport visual inspection unavailable.
 
 Surface padding correction: Charging Lab, Electric teaser and CTA retain their shared outer width and use 40px horizontal internal padding (24px mobile). Energy calculator already has independent 40px / 24px panel padding and remains unchanged. Existing tests/build passed; no browser visual QA available.
+
+VOLT/TORQ wordmarks use upright typography and real 900-weight self-hosted fonts via core fontWeight.black. FORMA unchanged. Existing tests and build passed.
