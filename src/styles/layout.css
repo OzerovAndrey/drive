@@ -75,3 +75,11 @@
 @media(max-width:1100px){.catalog-layout{grid-template-columns:var(--dimension-200) minmax(0,1fr)}}
 @media(max-width:800px){.catalog-layout,.config-layout{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:600px){.cta-section{padding-inline:var(--space-lg)}}
+/* Inset content inside contained surfaces without changing their outer width. */
+.section.charging-lab,.section.electric-teaser,.cta-section{
+  padding-inline:var(--dimension-40);
+  border-radius:var(--editorial-border-radius);
+}
+@media(max-width:600px){
+  .section.charging-lab,.section.electric-teaser,.cta-section{padding-inline:var(--space-lg)}
+}
