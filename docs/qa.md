@@ -23,3 +23,7 @@ Car imagery is illustrative, not a real manufacturer catalog. Different edition 
 ## v2 verification
 
 Eight domain tests and the production TypeScript/Vite build pass. Server rendering exercises 23 routes across all six brand/theme choices (138 renders) and verifies referenced public image files exist. SSR does not verify browser events, responsive layout, actual contrast over images or modal focus. Browser QA remains unavailable in this managed session.
+
+## Mobile booking correction — 15 October 2026
+
+User iPhone screenshot exposed a mobile rule applying width:100% to the consent checkbox, squeezing its adjacent anonymous text to the edge. Native date intrinsic width also overflowed the two-column grid. Restrict full-width rules to non-checkbox inputs, wrap consent text in a minmax(0,1fr) grid, constrain form/grid children, stack date/time below 480px, and use 16px fields on coarse-pointer devices to avoid iOS input focus zoom. Production build, domain tests and server route rendering are rerun; actual Safari confirmation remains required.
