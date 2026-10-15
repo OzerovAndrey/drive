@@ -29,3 +29,12 @@
 @media(prefers-reduced-motion:reduce){.auto-ticker>div,.electric-graphic>svg,.orbit-two,.hotspot:before,.charge-battery>span{animation:none}.charge-battery>span{width:80%}.gallery-stage>img,.experience-stage>img{animation:none}.header:before{transition:none}}
 
 .dialog:has(.gallery-stage.is-full){width:min(72rem,calc(100vw - 32px))}
+
+/* Two identical, viewport-filling groups keep the marquee seamless at any width. */
+.auto-ticker{padding-block:var(--space-md)}
+.auto-ticker>.ticker-track{display:flex;width:max-content;animation:ticker-roll 60s linear infinite}
+.ticker-group{display:flex;flex:0 0 auto;min-width:100vw;justify-content:space-around}
+.auto-ticker .ticker-group>span{flex:none;white-space:nowrap;font-size:var(--font-size-24);line-height:1.2;letter-spacing:.06em;gap:var(--space-xl);padding-right:var(--space-xl)}
+.auto-ticker svg{width:var(--dimension-20);height:var(--dimension-20)}
+@media(max-width:600px){.auto-ticker{padding-block:var(--space-sm)}.auto-ticker .ticker-group>span{font-size:var(--font-size-20);gap:var(--space-lg);padding-right:var(--space-lg)}.auto-ticker svg{width:var(--dimension-16);height:var(--dimension-16)}}
+@media(prefers-reduced-motion:reduce){.auto-ticker>.ticker-track{animation:none}}

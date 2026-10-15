@@ -37,3 +37,5 @@ Hero search refinement: icons sit inline beside field captions at every breakpoi
 Shared page rails: replaced independent header/hero/search/footer width calculations with one responsive inset. FAQ and editorial containers align to the same rails while prose retains readable line lengths. Existing tests, production build and SSR smoke checks run; browser viewport checks unavailable.
 
 Hero search spacing: panel padding is 16px on all sides; caption-to-select gap is 16px across breakpoints, using space.md.
+
+Automotive ticker: two identical groups each fill at least the viewport; translating the track by half its width loops at the matching group boundary without empty space. Smaller 24px desktop / 20px mobile typography and 20px / 16px icons. Reduced motion and hover pause retained. Existing tests/build verified; browser animation QA unavailable.
