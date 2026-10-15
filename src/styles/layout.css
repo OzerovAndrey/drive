@@ -83,3 +83,7 @@
 @media(max-width:600px){
   .section.charging-lab,.section.electric-teaser,.cta-section{padding-inline:var(--space-lg)}
 }
+
+/* Clip decorative hero artwork independently so the search shadow can extend. */
+.hero{overflow:visible}
+.hero-artwork{position:absolute;inset:0;overflow:hidden;isolation:isolate;z-index:-1;pointer-events:none}
