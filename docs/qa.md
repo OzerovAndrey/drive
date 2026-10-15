@@ -27,3 +27,7 @@ Eight domain tests and the production TypeScript/Vite build pass. Server renderi
 ## Mobile booking correction — 15 October 2026
 
 User iPhone screenshot exposed a mobile rule applying width:100% to the consent checkbox, squeezing its adjacent anonymous text to the edge. Native date intrinsic width also overflowed the two-column grid. Restrict full-width rules to non-checkbox inputs, wrap consent text in a minmax(0,1fr) grid, constrain form/grid children, stack date/time below 480px, and use 16px fields on coarse-pointer devices to avoid iOS input focus zoom. Production build, domain tests and server route rendering are rerun; actual Safari confirmation remains required.
+
+## Hero search correction — 15 October 2026
+
+User screenshot showed search icons above fields and an oversized panel overlapping the hero metadata. Global label flex-direction:column leaked into search labels. Make field anatomy explicitly horizontal, constrain the panel to the content width, normalize native selects with a non-interactive chevron, and replace the unlabeled round submit with Find cars. Keep a two-column mobile grid and coarse-pointer 16px select type. Existing filtering behavior is unchanged.
