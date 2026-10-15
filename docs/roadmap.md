@@ -15,3 +15,7 @@ Full Figma foundations, component library, variants and screens with explicit Br
 ## Stage 3
 
 Export documentation for the owner's local disk. A GitHub clone already contains the docs and project skill; direct disk copying needs access to that destination.
+
+## v2 — 15 October 2026
+
+Implemented richer model information, two exterior views per family, shared cabin study, gallery, specification export, standard equipment, buying-fit notes, expanded comparison, electric education/calculators, three guides and additional icon/motion details. GitHub Pages is the publishing destination; do not publish or update the earlier auxiliary Sites demo.

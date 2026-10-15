@@ -2,7 +2,7 @@
 
 ## Completed locally
 
-- Five domain tests: combined filters, non-mutating sorting, price itemization, incompatible package rejection and recommendation constraints.
+- Eight domain tests, including energy-cost arithmetic, adverse cost comparison and charging assumptions: combined filters, non-mutating sorting, price itemization, incompatible package rejection and recommendation constraints.
 - All six brand/theme combinations resolve token references; Brand/Theme key parity and component layering pass.
 - 66 declared foreground/background contrast checks pass.
 - TypeScript strict build and Vite production build pass.
@@ -19,3 +19,7 @@ Verify hero crop/readability and transitions; route/back behavior; filter empty/
 ## Limitations
 
 Car imagery is illustrative, not a real manufacturer catalog. Different edition models reuse imagery. Configuration paint/interior choices affect selection and price, not the car photograph. Test drives are demo confirmations only. Figma Stage 2 is not performed.
+
+## v2 verification
+
+Eight domain tests and the production TypeScript/Vite build pass. Server rendering exercises 23 routes across all six brand/theme choices (138 renders) and verifies referenced public image files exist. SSR does not verify browser events, responsive layout, actual contrast over images or modal focus. Browser QA remains unavailable in this managed session.

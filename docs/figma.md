@@ -21,3 +21,7 @@ Recreate Home, catalogue, model detail, compare, saved, four configurator steps,
 Check component names and tokens against code; inspect inherited modes; compare screenshots in all six appearances. Known Figma gotcha from Atlas: avoid paint opacity on variable-bound paints if instances drop it; use a tint child/layer opacity. Brand images are content assets, not color tokens.
 
 Track completed screens in this document during Stage 2. No prior-file IDs or synchronization claims are valid until actual work is performed.
+
+## v2 handoff additions
+
+Include the new gallery/lightbox, model subnav, equipment/specification tabs, cabin hotspots, chapter selector, cost calculator, charging lab, journal cards and three article pages. New routes and components are documented in docs/components.md and docs/architecture.md. Figma remains Stage 2 and has not been modified by this update.

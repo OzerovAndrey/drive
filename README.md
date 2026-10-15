@@ -38,3 +38,9 @@ All cars, images, specifications, prices and studios are fictional. The test-dri
 - `.github/workflows/pages.yml`: checks, build and Pages deployment.
 
 Stage 1 is the working website. Stage 2 recreates variables, styles, components, variants, pages and prototypes in Figma. Stage 3 exports documentation for the owner's local disk. See `docs/figma.md` for the handoff checklist.
+
+## v2 — richer automotive detail
+
+Expanded model details, standard equipment, dimensions, specification downloads, thumbnail/lightbox gallery, shared cabin concept hotspots, chapter switches, 3 reading guides, electric-life route, ideal charging simulation and energy-only cost comparison. New photography and SVG icons share the existing three-brand/two-theme foundation. Research and source links: docs/research-2026-10-15.md.
+
+Additional verification: `node scripts/smoke-render.mjs` (server-rendered route and asset checks; not browser QA).

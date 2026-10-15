@@ -22,3 +22,17 @@
 | Footer | links, author, fictional-data notice | responsive layout |
 
 Figma recreation must use component sets for applicable variants, text/boolean/instance-swap properties, Auto Layout, bound fills/strokes/spacing/radii and typography styles. Add missing loading/error/success specimens where they apply; do not invent meaningless states for static primitives.
+
+## v2 expansion — 15 October 2026
+
+- ExperienceHome: lifestyle photo cards, motion ticker, selectable driving/cabin/technology chapters, electric teaser and buying confidence FAQ.
+- Gallery: thumbnail selection, previous/next, enlarged native dialog; collection cabin study labeled separately.
+- Model subnavigation: in-page section controls; technical categories; equipment grid; downloadable text specification.
+- Cabin hotspots: labeled buttons with expanded explanations; day/evening visual treatment.
+- AnimatedNumber: viewport-triggered, finite numeric reveal with reduced-motion fallback.
+- EnergyCalculator: distance/price/consumption inputs and explicit annual energy-only comparison, including negative cost differences.
+- ElectricPage: education, four charging-power options and ideal constant-power 10–80% illustration.
+- Journal / GuidePage: three linked editorial reading routes.
+- 21 new icons extend the existing SVG stroke vocabulary; no external icon package.
+
+New component token groups: editorial, gallery, hotspot, specification, equipment, calculator and charging. These use brand/theme semantic aliases. Recreate these in Figma during Stage 2 alongside existing components.

@@ -9,3 +9,7 @@
 - Reduced motion disables animation, smooth scroll and parallax. No scroll hijacking, no page pinning, no required dragging.
 
 Brand motion duration token is prepared, but current CSS timings use a shared baseline; distinct per-brand pacing is a later refinement. Avoid claiming brand-specific motion is already complete.
+
+## v2 motion additions
+
+Sticky-header reading progress, automotive text/icon ticker (pauses on hover), image entrances, photograph zoom, gallery transitions, cabin atmosphere treatment, hotspot pulse, finite scroll-triggered power/range counters, electric orbit and battery animation, responsive cost-bar transitions. Reduced-motion disables continuous movement and transitions. No video/autoplay audio, scroll hijacking or required pointer motion.
