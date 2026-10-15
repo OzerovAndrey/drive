@@ -31,3 +31,5 @@ User iPhone screenshot exposed a mobile rule applying width:100% to the consent 
 ## Hero search correction — 15 October 2026
 
 User screenshot showed search icons above fields and an oversized panel overlapping the hero metadata. Global label flex-direction:column leaked into search labels. Make field anatomy explicitly horizontal, constrain the panel to the content width, normalize native selects with a non-interactive chevron, and replace the unlabeled round submit with Find cars. Keep a two-column mobile grid and coarse-pointer 16px select type. Existing filtering behavior is unchanged.
+
+Hero search refinement: icons sit inline beside field captions at every breakpoint. Reduced vertical padding and field minimum height for a slimmer panel. Verified with existing tests and production build; browser QA unavailable.
