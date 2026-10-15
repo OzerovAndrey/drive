@@ -39,3 +39,5 @@ Shared page rails: replaced independent header/hero/search/footer width calculat
 Hero search spacing: panel padding is 16px on all sides; caption-to-select gap is 16px across breakpoints, using space.md.
 
 Automotive ticker: two identical groups each fill at least the viewport; translating the track by half its width loops at the matching group boundary without empty space. Smaller 24px desktop / 20px mobile typography and 20px / 16px icons. Reduced motion and hover pause retained. Existing tests/build verified; browser animation QA unavailable.
+
+Electric teaser card: surface width now matches adjacent content cards, with internal responsive padding. Native select arrows replaced by a CSS chevron inset 16px from the right edge, with 16px left padding and room reserved for the indicator; hero retains its SVG chevron with the same inset. Native menus/keyboard behaviour retained, forced-colors uses the browser arrow. Existing tests and build passed; browser visual checks unavailable.
