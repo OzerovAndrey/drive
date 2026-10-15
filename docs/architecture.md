@@ -20,4 +20,4 @@ Seven photographs represent six fictional editions. Each model family has a stud
 
 ## Page alignment
 
-`src/styles/layout.css` loads after component styles and defines shared content rails. The 1440px page token includes 64px desktop gutters (1312px content); tablet gutters are 32px and mobile gutters 24px. Header, hero copy, metadata, search, sections, model navigation, CTA and footer share those edges. Editorial prose retains a shorter measure within the rails. Full-bleed imagery and ticker backgrounds remain viewport-wide.
+`src/styles/layout.css` loads after component styles and defines shared content rails. The 1440px page token defines 1312px content after 64px desktop gutters; tablet gutters are 32px and mobile gutters 24px. Sections themselves are 1312px maximum with no extra outer padding, so backgrounds and separator lines match adjacent cards. Header, hero copy, metadata, search, sections, model navigation, CTA and footer share those edges. Editorial prose retains a shorter measure within the rails. Hero imagery and ticker backgrounds remain viewport-wide. Article covers and CTA surfaces use the content width.

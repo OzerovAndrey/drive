@@ -15,10 +15,10 @@
 }
 .search-strip{max-width:none;margin-inline:0}
 .section{
-  width:100%;
-  max-width:calc(var(--layout-content) + var(--layout-gutter) * 2);
+  width:calc(100% - var(--layout-gutter) * 2);
+  max-width:var(--layout-content);
   margin-inline:auto;
-  padding-inline:var(--layout-gutter);
+  padding-inline:0;
 }
 .footer-top,.footer-bottom{max-width:none;width:100%}
 /* Editorial prose keeps a readable line length within the shared page rails. */
@@ -54,3 +54,24 @@
 .search-field-copy>svg{right:var(--space-md)}
 @media(max-width:600px){.section.electric-teaser{padding-inline:var(--space-lg)}}
 @media(forced-colors:active){:root select{appearance:auto;background-image:none}.search-field-copy>svg{display:none}}
+
+/* Contained surfaces and article media use the same outer edges as page sections. */
+.cta-section,.guide-cover{
+  width:calc(100% - var(--layout-gutter) * 2);
+  max-width:var(--layout-content);
+  margin-inline:auto;
+  border-radius:var(--editorial-border-radius);
+}
+.cta-section{padding-inline:var(--space-xl)}
+/* Grid children may shrink; wide comparison data scrolls inside its own panel. */
+.section>*,.catalog-layout>*,.config-layout>*,.how-grid>*,.system-grid>*,
+.technical-grid>*,.model-story>*,.charging-layout>*,.energy-calculator>*,
+.electric-heading>*,.lifestyle-grid>*,.journal-grid>*,.car-grid>*{min-width:0}
+.comparison-scroll{max-width:100%;min-width:0}
+.catalog-layout{grid-template-columns:var(--dimension-240) minmax(0,1fr)}
+.config-layout{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}
+.detail-bar>div{flex-shrink:1;flex-wrap:wrap}
+.section :is(h1,h2,h3,p){overflow-wrap:break-word}
+@media(max-width:1100px){.catalog-layout{grid-template-columns:var(--dimension-200) minmax(0,1fr)}}
+@media(max-width:800px){.catalog-layout,.config-layout{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.cta-section{padding-inline:var(--space-lg)}}
