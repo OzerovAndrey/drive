@@ -8,7 +8,7 @@ Read BRIEF.md and AGENTS.md from the repository root before substantial changes.
 
 Use one shared product across three identity sets and two themes. Preserve selections and in-progress flows when appearance changes. Edit authoritative tokens/ JSON; run npm run tokens:build. Never hand edit generated files or introduce a second palette.
 
-Run npm test and npm run build before committing. Record the actual QA performed; do not claim browser checks if the browser is unavailable. Keep all work in OzerovAndrey/Drive and sync this project skill through Git with code changes.
+Run npm test and npm run build before committing. Record the actual QA performed; do not claim browser checks if the browser is unavailable. Keep all work in OzerovAndrey/drive and sync this project skill through Git with code changes.
 
 Use [references/workflow.md](references/workflow.md) for the three-stage workflow and file map. Read root docs/tokens.md for schema/composition and docs/components.md for component anatomy. Read docs/figma.md before Stage 2.
 

@@ -44,3 +44,7 @@ Stage 1 is the working website. Stage 2 recreates variables, styles, components,
 Expanded model details, standard equipment, dimensions, specification downloads, thumbnail/lightbox gallery, shared cabin concept hotspots, chapter switches, 3 reading guides, electric-life route, ideal charging simulation and energy-only cost comparison. New photography and SVG icons share the existing three-brand/two-theme foundation. Research and source links: docs/research-2026-10-15.md.
 
 Additional verification: `node scripts/smoke-render.mjs` (server-rendered route and asset checks; not browser QA).
+
+Live site: https://ozerovandrey.github.io/drive/
+
+Repository: https://github.com/OzerovAndrey/drive
