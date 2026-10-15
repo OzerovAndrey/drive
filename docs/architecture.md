@@ -16,7 +16,7 @@ Local storage: drive.brand, drive.theme, drive.saved, drive.compare, drive.confi
 
 ## Known limitations
 
-Seven photographs represent six fictional editions. Each model family has a studio and location photo; the cabin is a shared collection design study. paint/interior selections are descriptive swatches, not a 3D preview. Product copy is English. Prices are simulated USD. No real bookings or accounts. First-stage component coverage is limited to working product needs; full Figma variant/state coverage is a separate phase.
+Seven photographs represent six fictional editions. Each model family has a studio and location photo; the cabin is a shared collection design study. paint/interior selections are descriptive swatches, not a 3D preview. Product copy is English. Prices are simulated USD. No real bookings or accounts. First-stage component coverage is limited to working product needs; the Stage 2 component library now exists in Figma; full product page recreation is separate.
 
 ## Page alignment
 

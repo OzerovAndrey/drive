@@ -25,4 +25,4 @@ Home, catalogue, model detail, comparison, saved cars, four-step configurator, g
 
 ## Current status
 
-Expanded v2 implementation: detailed specifications and equipment, location photography, gallery, cabin hotspots, electric education, energy/charging calculators and editorial guides. Figma not started. See QA notes for exactly what was verified. Never describe Figma as synchronized until performed and verified.
+Expanded v2 implementation: detailed specifications and equipment, location photography, gallery, cabin hotspots, electric education, energy/charging calculators and editorial guides. Stage 2 Figma component library created; full page recreation remains separate. See QA notes for exactly what was verified. Never describe Figma as synchronized until performed and verified.

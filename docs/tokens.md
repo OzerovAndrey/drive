@@ -17,7 +17,7 @@ Theme interpretation: one Base collection; Brand with three modes; Theme with tw
 
 `npm run tokens:check`: brand/theme key parity, component reference restrictions, alias resolution in all six configurations, 66 declared-pair contrast checks.
 
-`npm run tokens:build`: regenerate CSS, `public/tokens-studio.json`, and `public/tokens-meta.json`. Bundle includes token sets as top-level keys, `$themes`, `$metadata`. Import into Tokens Studio during Stage 2 and verify a sample resolved alias in all six configurations. No Figma import has yet been verified for this project.
+`npm run tokens:build`: regenerate CSS, `public/tokens-studio.json`, and `public/tokens-meta.json`. Bundle includes token sets as top-level keys, `$themes`, `$metadata`. Import into Tokens Studio during Stage 2 and verify a sample resolved alias in all six configurations. Stage 2 native variable bindings and six appearances have been verified in the target Figma file. Theme JSON now includes file-specific variable/style references. Tokens Studio shared document data is seeded; plugin UI import has not been exercised.
 
 ## Discipline
 

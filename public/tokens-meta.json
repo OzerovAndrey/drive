@@ -1,6 +1,6 @@
 {
   "counts": {
-    "core": 72,
+    "core": 73,
     "brand/volt": 31,
     "brand/torq": 31,
     "brand/forma": 31,
@@ -10,7 +10,7 @@
     "typography": 9,
     "components": 172
   },
-  "total": 372,
+  "total": 373,
   "brands": [
     "volt",
     "torq",

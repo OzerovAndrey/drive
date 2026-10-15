@@ -48,3 +48,9 @@ Additional verification: `node scripts/smoke-render.mjs` (server-rendered route 
 Live site: https://ozerovandrey.github.io/drive/
 
 Repository: https://github.com/OzerovAndrey/drive
+
+## Figma component library
+
+Component library and six appearances: https://www.figma.com/design/eYFiO4rjb82YjheTpdPccy/Untitled
+
+Tokens Studio bundle: [public/tokens-studio.json](public/tokens-studio.json). Import guide and validation: [docs/figma.md](docs/figma.md).

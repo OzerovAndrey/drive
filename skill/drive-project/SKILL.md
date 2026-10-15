@@ -10,6 +10,6 @@ Use one shared product across three identity sets and two themes. Preserve selec
 
 Run npm test and npm run build before committing. Record the actual QA performed; do not claim browser checks if the browser is unavailable. Keep all work in OzerovAndrey/drive and sync this project skill through Git with code changes.
 
-Use [references/workflow.md](references/workflow.md) for the three-stage workflow and file map. Read root docs/tokens.md for schema/composition and docs/components.md for component anatomy. Read docs/figma.md before Stage 2.
+Use [references/workflow.md](references/workflow.md) for the three-stage workflow and file map. Read root docs/tokens.md for schema/composition and docs/components.md for component anatomy. Read docs/figma.md before Figma work. Stage 2 component library exists in file eYFiO4rjb82YjheTpdPccy; load docs/figma/manifest.json for exact IDs and update in place. Full page recreation is not yet complete.
 
 Keep test-drive form fields ephemeral. Make confirmation explicitly a demo. Use fictional automotive data without implying real manufacturer capabilities.

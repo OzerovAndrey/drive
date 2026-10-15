@@ -1,0 +1,28 @@
+const page=await figma.getNodeByIdAsync(PAGE);await figma.setCurrentPageAsync(page);
+const V=Object.fromEntries((await figma.variables.getLocalVariablesAsync()).map(v=>[v.name.replaceAll('/','.'),v]));
+const collections=await figma.variables.getLocalVariableCollectionsAsync();
+await Promise.all(['Inter','DM Sans','Barlow Condensed','Cormorant Garamond'].flatMap(family=>['Regular','Bold'].map(style=>figma.loadFontAsync({family,style}))));
+await Promise.all(['Inter','DM Sans'].map(family=>figma.loadFontAsync({family,style:'Black'})));
+let styles=await figma.getLocalTextStylesAsync();
+const roles={display:[112,'Bold',110],hero:[80,'Bold',110],h1:[64,'Bold',110],h2:[48,'Bold',110],h3:[32,'Bold',110],title:[24,'Bold',160],body:[16,'Regular',160],small:[14,'Regular',160],caption:[12,'Regular',160],label:[13,'Bold',140],eyebrow:[11,'Regular',160]};
+for(const[name,[size,style,line]]of Object.entries(roles)){if(!styles.some(s=>s.name==='DRIVE/'+name)){const s=figma.createTextStyle();s.name='DRIVE/'+name;s.fontName={family:'Inter',style};s.fontSize=size;s.lineHeight={unit:'PERCENT',value:line};styles.push(s);}}
+const made=[],sets={};let cy=100;
+function mark(n){made.push(n.id);return n}
+function paint(path){if(!V[path])throw Error('Missing token '+path);return figma.variables.setBoundVariableForPaint({type:'SOLID',color:{r:0,g:0,b:0}},'color',V[path]);}
+function fill(n,path){n.fills=path?[paint(path)]:[];}
+function bind(n,key,path){if(!V[path])throw Error('Missing token '+path);n.setBoundVariable(key,V[path]);}
+function radius(n,path){for(const p of ['topLeftRadius','topRightRadius','bottomLeftRadius','bottomRightRadius'])bind(n,p,path);}
+function pad(n,path){for(const p of ['paddingTop','paddingBottom','paddingLeft','paddingRight'])bind(n,p,path);}
+function F(name,w=400,dir='VERTICAL',gap='space.md',padding=null,bg=null,component=false){const n=mark(component?figma.createComponent():figma.createAutoLayout());n.name=name;n.layoutMode=dir;n.resize(w,100);n.primaryAxisSizingMode=dir==='HORIZONTAL'?'FIXED':'AUTO';n.counterAxisSizingMode=dir==='HORIZONTAL'?'AUTO':'FIXED';n.counterAxisAlignItems='MIN';n.clipsContent=false;fill(n,bg);bind(n,'itemSpacing',gap);if(padding)pad(n,padding);return n;}
+function surf(n,group='card',padding=true){fill(n,group+'.bg');n.strokes=[paint(group+'.br')];bind(n,'strokeWeight','dimension.1');radius(n,group+'.borderRadius');if(padding){bind(n,'paddingLeft',group+'.paddingH');bind(n,'paddingRight',group+'.paddingH');bind(n,'paddingTop',group+'.paddingV');bind(n,'paddingBottom',group+'.paddingV');}return n;}
+function row(parent,name,w=parent.width-48,gap='space.md'){const n=F(name,w,'HORIZONTAL',gap);parent.appendChild(n);n.counterAxisAlignItems='CENTER';return n;}
+function T(parent,content,role='body',color='color.text.primary',width=null,name='Label'){const t=mark(figma.createText());t.name=name;t.fontName={family:'Inter',style:roles[role][1]};t.fontSize=roles[role][0];t.lineHeight={unit:'PERCENT',value:roles[role][2]};t.characters=content;t.textStyleId=styles.find(s=>s.name==='DRIVE/'+role).id;fill(t,color);parent.appendChild(t);t.textAutoResize='HEIGHT';t.resize(width??Math.max(80,parent.width-parent.paddingLeft-parent.paddingRight),t.height);bind(t,'fontFamily',role.startsWith('h')||role==='display'?'fontFamily.display':'fontFamily.base');return t;}
+function textProp(c,t,name='Label'){const key=c.addComponentProperty(name,'TEXT',t.characters);t.componentPropertyReferences={characters:key};return key;}
+function image(parent,key,w,h){const n=mark(figma.createRectangle());n.name='Photo / '+key;n.resize(w,h);n.fills=[{type:'IMAGE',imageHash:IMAGES[key],scaleMode:'FILL'}];radius(n,'borderRadius.surface');parent.appendChild(n);return n;}
+async function inst(name,parent,w=null,index=0){const info=REG[name];if(!info)throw Error('Missing component '+name);let c=await figma.getNodeByIdAsync(info.variants?info.variants[index]:info.id);const n=mark(c.createInstance());n.name=name;parent.appendChild(n);if(w)n.resize(w,n.height);return n;}
+async function icon(name,parent,color='color.text.primary',size=20){const info=REG['Icon/'+name];if(!info)throw Error('Missing icon '+name);const c=await figma.getNodeByIdAsync(info.id);const n=mark(c.createInstance());parent.appendChild(n);n.name='Icon';n.resize(size,size);for(const v of n.findAllWithCriteria({types:['VECTOR','ELLIPSE','RECTANGLE','LINE']})){if(v.strokes.length)v.strokes=[paint(color)];}return n;}
+function setMode(n,brand='VOLT',theme='Light'){for(const[cname,mname]of [['Brand',brand],['Theme',theme]]){const c=collections.find(c=>c.name===cname);n.setExplicitVariableModeForCollection(c,c.modes.find(m=>m.name===mname).modeId);}}
+function register(name,variants,description=''){let n;if(variants.length>1){n=mark(figma.combineAsVariants(variants,page));n.name=name;let y=32,maxw=0;for(const v of variants){v.x=32;v.y=y;y+=v.height+24;maxw=Math.max(maxw,v.width);}n.resizeWithoutConstraints(maxw+64,y+8);}else{n=variants[0];n.name=name;}n.description=description||'DRIVE '+name+'. Shared component; inherits Brand and Theme modes. Source: https://github.com/OzerovAndrey/drive';n.x=80;n.y=cy;cy+=n.height+80;sets[name]={id:n.id,variants:variants.map(v=>v.id),page:page.id};REG[name]=sets[name];return n;}
+function base(name,w=400,dir='VERTICAL',group='card'){const c=F(name,w,dir,'space.md',null,null,true);if(group)surf(c,group);return c;}
+// Return canvas IDs for ledger persistence after each safe construction phase.
+async function output(){const ids=new Set(made);for(const id of made){const n=await figma.getNodeByIdAsync(id);if(n&&'findAll'in n)for(const ch of n.findAll())ids.add(ch.id);}return {createdNodeIds:[...ids],components:sets,page:page.id,styleCount:styles.length};}

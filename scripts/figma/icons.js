@@ -1,0 +1,7 @@
+if(page.children.length)throw Error('Page is not empty. Resume through manifest IDs; do not recreate existing components.');
+for(const[name,svg]of Object.entries(ICONS)){const c=base('Icon/'+name,24,'HORIZONTAL',null);c.resize(24,24);c.primaryAxisSizingMode='FIXED';c.itemSpacing=0;const art=mark(figma.createNodeFromSvg(svg));c.appendChild(art);art.resize(24,24);for(const n of art.findAllWithCriteria({types:['VECTOR','ELLIPSE','RECTANGLE','LINE']})){if(n.strokes.length)n.strokes=[paint('color.text.primary')];}register('Icon/'+name,[c]);}
+// Compact icon source grid.
+let ix=0;for(const value of Object.values(sets)){const n=await figma.getNodeByIdAsync(value.id);n.x=80+(ix%8)*140;n.y=100+Math.floor(ix/8)*100;ix++;}
+cy=760;
+const logos=[];for(const[brand,family]of [['VOLT','DM Sans'],['TORQ','Inter'],['FORMA','Cormorant Garamond']]){const c=base('Brand='+brand,220,'VERTICAL',null);setMode(c,brand);const r=row(c,'Wordmark',220);const markText=T(r,brand==='VOLT'?'↗':brand==='TORQ'?'//':'◈','h3','color.text.accent',36);markText.fontName={family:'Inter',style:'Bold'};const tx=T(r,brand,'h3','color.text.primary',160,'Wordmark');tx.fontName={family,style:brand==='FORMA'?'Bold':'Black'};tx.setBoundVariable('fontFamily',V[brand==='FORMA'?'fontFamily.display':'fontFamily.base']);T(c,'BY DRIVE','eyebrow','color.text.secondary',220);logos.push(c);}register('Brand logo',logos,'Brand identity: upright heavy VOLT/TORQ; serif FORMA. Select Brand variant with matching Brand variable mode.');
+return await output();

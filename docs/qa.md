@@ -49,3 +49,5 @@ Surface padding correction: Charging Lab, Electric teaser and CTA retain their s
 VOLT/TORQ wordmarks use upright typography and real 900-weight self-hosted fonts via core fontWeight.black. FORMA unchanged. Existing tests and build passed.
 
 Hero search shadow: moved decorative media/watermark into a dedicated clipped artwork layer and let the hero overflow remain visible. Search shadow can extend below the hero in light themes; artwork remains contained. Tests/build/SSR checks passed; browser visual verification unavailable.
+
+Stage 2 Figma delivery: component library, 327 variables, six appearances, native and Tokens Studio property references. Figma screenshot/structural QA documented in docs/figma.md. Plugin UI import was not manually exercised.

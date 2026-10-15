@@ -1,0 +1,8 @@
+const changed=[];
+for(const n of page.findAllWithCriteria({types:['RECTANGLE']})){if(n.name.startsWith('Photo / ')){const hash=IMAGES[n.name.slice(8)];if(hash){n.fills=[{type:'IMAGE',imageHash:hash,scaleMode:'FILL'}];changed.push(n.id);}}}
+
+// Text stays editable while controls stretch to their instance width.
+if(page.name==='03 · Controls')for(const name of ['Input','Select']){const set=await figma.getNodeByIdAsync(REG[name].id);for(const c of set.children){for(const child of c.children){if(child.type==='TEXT'||child.type==='FRAME')child.layoutSizingHorizontal='FILL';if(child.type==='FRAME'){const value=child.findOne(n=>n.type==='TEXT');if(value)value.layoutSizingHorizontal='FILL';}}changed.push(c.id);}}
+if(page.name==='06 · Product flows'){const set=await figma.getNodeByIdAsync(REG['Configurator'].id);const labels={Exterior:['Glacier white','Midnight black','Silver metallic'],Wheels:['Aero 19-inch','Sport 20-inch','Performance 21-inch'],Interior:['Charcoal fabric','Light leather','Premium leather']};for(const c of set.children){const step=c.name.split('=')[1];if(labels[step]){const options=c.findAllWithCriteria({types:['INSTANCE']}).filter(n=>n.name==='Option');for(let i=0;i<options.length;i++){const texts=options[i].findAllWithCriteria({types:['TEXT']});texts[0].characters=labels[step][i];texts[1].characters=i===0?'Included':'Optional upgrade';}}}}
+if(page.name==='07 · Automotive modules'){for(const c of page.findAllWithCriteria({types:['COMPONENT']})){if(c.name==='Energy calculator'){const texts=c.findAllWithCriteria({types:['TEXT']}).filter(n=>n.characters==='name@example.com');['0.20','1.80','18.0'].forEach((value,i)=>{if(texts[i])texts[i].characters=value;});}if(c.name==='Range slider'){} }}
+return {mutatedNodeIds:changed};
