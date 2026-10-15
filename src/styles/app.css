@@ -24,10 +24,10 @@
 @media(hover:none) and (pointer:coarse){.booking-form input:not([type=checkbox]),.booking-form select{font-size:var(--font-size-16)}}
 
 /* Hero search: explicit horizontal field anatomy prevents global label styles leaking in. */
-.search-strip{grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:var(--space-lg);padding:var(--space-sm) var(--space-lg);max-width:var(--dimension-1280);margin-inline:auto;box-shadow:0 var(--dimension-12) var(--dimension-32) #00000018}
-.search-strip>label{display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:var(--space-md);min-width:0;min-height:var(--dimension-48);padding:0 var(--space-lg) var(--space-xs) 0;border-right:var(--dimension-1) solid var(--filter-br)}
+.search-strip{grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:var(--space-lg);padding:var(--space-md);max-width:var(--dimension-1280);margin-inline:auto;box-shadow:0 var(--dimension-12) var(--dimension-32) #00000018}
+.search-strip>label{display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:var(--space-md);min-width:0;min-height:var(--dimension-48);padding:0 var(--space-lg) 0 0;border-right:var(--dimension-1) solid var(--filter-br)}
 .search-strip>label>svg{display:block;flex:none;width:var(--dimension-20);height:var(--dimension-20);color:var(--color-text-accent)}
-.search-strip .search-field-copy{position:relative;display:flex;flex-direction:column;gap:var(--space-xs);flex:1;min-width:0;width:auto}
+.search-strip .search-field-copy{position:relative;display:flex;flex-direction:column;gap:var(--space-md);flex:1;min-width:0;width:auto}
 .search-strip small{display:flex;flex-direction:row;align-items:center;gap:var(--space-sm);font-size:var(--font-size-11);font-weight:var(--font-weight-regular);letter-spacing:.02em;line-height:1.4}
 .search-strip select{appearance:none;-webkit-appearance:none;display:block;min-width:0;min-inline-size:0;width:100%;max-width:100%;min-height:var(--dimension-24);padding:0 var(--space-lg) 0 0;margin:0;background:transparent;border:0;border-radius:0;color:var(--filter-color);font-size:var(--font-size-14);font-weight:var(--font-weight-medium);line-height:1.6;text-overflow:ellipsis;cursor:pointer}
 .search-field-copy>svg{position:absolute;right:0;bottom:var(--dimension-6);transform:rotate(90deg);pointer-events:none;color:var(--filter-muted)}

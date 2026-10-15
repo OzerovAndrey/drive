@@ -35,3 +35,5 @@ User screenshot showed search icons above fields and an oversized panel overlapp
 Hero search refinement: icons sit inline beside field captions at every breakpoint. Reduced vertical padding and field minimum height for a slimmer panel. Verified with existing tests and production build; browser QA unavailable.
 
 Shared page rails: replaced independent header/hero/search/footer width calculations with one responsive inset. FAQ and editorial containers align to the same rails while prose retains readable line lengths. Existing tests, production build and SSR smoke checks run; browser viewport checks unavailable.
+
+Hero search spacing: panel padding is 16px on all sides; caption-to-select gap is 16px across breakpoints, using space.md.
