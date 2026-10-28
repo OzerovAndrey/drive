@@ -87,3 +87,7 @@
 /* Clip decorative hero artwork independently so the search shadow can extend. */
 .hero{overflow:visible}
 .hero-artwork{position:absolute;inset:0;overflow:hidden;isolation:isolate;z-index:-1;pointer-events:none}
+
+/* Keep the author’s portfolio discoverable in every appearance. */
+.footer-portfolio{text-decoration:underline;text-underline-offset:.2em}
+.footer-portfolio:hover{color:var(--color-text-primary)}
